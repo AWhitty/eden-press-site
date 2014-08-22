@@ -1,0 +1,21 @@
+---
+layout: article
+---
+
+{% for post in site.posts %}
+  <section class="blog card card-shorty">
+    {% if post.background %}
+      <div class="full-bg" style="background-image: url('{{ post.background }}');"></div>
+    {% endif %}
+
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-8">
+          <span class="date">{{ post.date | date: '%B %d, %Y' }}</span>
+          <h1>{{ post.title }}</h1>
+          {{ post.content }}
+        </div>
+      </div>
+    </div>
+  </section>
+{% endfor %}

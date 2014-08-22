@@ -1,59 +1,26 @@
 ---
-layout: default
-body_id: page-team
+layout: card-deck
 ---
 
-<div class="content-01">
-	<header>
-		<div class="container">
-			<div class="logo">
-				<a href="#"><img src="/images/logo.svg" alt="eDen" /></a>
-			</div>
+<section class="card card-half-height white-on-black">
+  <div class="full-bg" style="background-image: url('/images/team-banner.jpg');"></div>
 
-			{% include nav.html %}
+  <div class="container text-center">
+    <h3><strong>We are 40 dedicated students.</strong></h3>
+    <h1>Team Stanford 2015</h1>
+  </div>
+</section>
 
-			<a href="#" class="nav-show">
-				<img src="/images/nav-icon.svg" alt="Show Navigation" />
-			</a>
-		</div>
-	</header>
-
-	<div class="content-02">
-		<section class="top">
-
-			<hgroup>
-				<h3>We are 40 dedicated students.</h3>
-				<h1>Team Stanford 2015</h1>
-			</hgroup>
-
-		</section>
-
-		<section class="list">
-			<div class="container">
-				<article>
-					<div class="title">
-						<span>Professor</span>
-					</div>
-					<span>Larry Leifer</span>
-					<img src="/images/temp-team-1.jpg" />
-				</article>
-
-				<article>
-					<div class="title">
-						<span>Student Leadership</span>
-					</div>
-					<span>Adam</span>
-					<img src="/images/temp-team-2.jpg" />
-				</article>
-
-				<article>
-					<div class="title">
-						<span>Marketing</span>
-					</div>
-					<span>Sawyer Altman</span>
-					<img src="/images/temp-team-3.jpg" />
-				</article>
-			</div>
-		</section>
-	</div>
-</div>
+<section class="content">
+  <div class="container">
+    <div class="row pad2y">
+      {% for member in site.data.team %}
+        <div class="col-sm-4">
+          <img src="{{ member.picture }}" class="img-responsive" alt="">
+          <h4>{{ member.name }}</h4>
+          <h5>{{ member.role }}</h5>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>

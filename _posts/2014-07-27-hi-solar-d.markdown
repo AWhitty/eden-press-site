@@ -1,0 +1,8 @@
+---
+layout: post
+title:  "Hi, Solar D"
+date:   2014-07-27 16:13:21
+categories: news
+---
+
+Technically this post was posted before the one above it, but it's just here to show that this is a real blog comprised of a collection of posts.
