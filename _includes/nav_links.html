@@ -1,6 +1,6 @@
-<li {% if page.url == '/' %}            class="active"{% endif %}><a href="/">            Home</a></li>
-<li {% if page.url == '/philosophy/' %} class="active"{% endif %}><a href="/philosophy/"> Design philosophy</a></li>
-<li {% if page.url == '/blog/' %}       class="active"{% endif %}><a href="/blog/">       Blog</a></li>
-<li {% if page.url == '/team/' %}       class="active"{% endif %}><a href="/team/">       Team</a></li>
-<li {% if page.url == '/sponsors/' %}   class="active"{% endif %}><a href="/sponsors/">   Sponsors</a></li>
-<li {% if page.url == '/gallery/' %}    class="active"{% endif %}><a href="/gallery/">    Media</a></li>
+<li {% if page.url == '{{ site.baseurl }}/' %}            class="active"{% endif %}><a href="{{ site.baseurl }}/">            Home</a></li>
+<li {% if page.url == '{{ site.baseurl }}/philosophy/' %} class="active"{% endif %}><a href="{{ site.baseurl }}/philosophy/"> Design philosophy</a></li>
+<li {% if page.url == '{{ site.baseurl }}/blog/' %}       class="active"{% endif %}><a href="{{ site.baseurl }}/blog/">       Blog</a></li>
+<li {% if page.url == '{{ site.baseurl }}/team/' %}       class="active"{% endif %}><a href="{{ site.baseurl }}/team/">       Team</a></li>
+<li {% if page.url == '{{ site.baseurl }}/sponsors/' %}   class="active"{% endif %}><a href="{{ site.baseurl }}/sponsors/">   Sponsors</a></li>
+<li {% if page.url == '{{ site.baseurl }}/gallery/' %}    class="active"{% endif %}><a href="{{ site.baseurl }}/gallery/">    Media</a></li>
