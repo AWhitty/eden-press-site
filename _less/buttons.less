@@ -1,0 +1,68 @@
+.button-outline-variant(@color; @background; @border) {
+  color: @color;
+  background: none;
+  border-color: @border;
+  border-width: 2px;
+
+  &:hover,
+  &:focus,
+  &:active,
+  &.active,
+  .open .dropdown-toggle& {
+    color: #fff;
+    border-color: @border;
+    background: @background;
+  }
+  &:active,
+  &.active,
+  .open .dropdown-toggle& {
+    background-image: none;
+  }
+  &.disabled,
+  &[disabled],
+  fieldset[disabled] & {
+    &,
+    &:hover,
+    &:focus,
+    &:active,
+    &.active {
+      border-color: @border;
+    }
+  }
+
+  .badge {
+    color: @background;
+    background-color: @color;
+  }
+}
+
+
+.btn-outline-white   { .button-outline-variant(rgba(255,255,255,1); rgba(255,255,255,.2); rgba(255,255,255,.8)); }
+.btn-outline-default { .button-outline-variant(@btn-default-color; @btn-default-bg; @btn-default-border); }
+.btn-outline-primary { .button-outline-variant(@btn-primary-bg;    @btn-primary-bg; @btn-primary-border); }
+.btn-outline-success { .button-outline-variant(@btn-success-bg;    @btn-success-bg; @btn-success-border); }
+.btn-outline-info    { .button-outline-variant(@btn-info-bg;       @btn-info-bg;    @btn-info-border);    }
+.btn-outline-warning { .button-outline-variant(lighten(@btn-warning-border, 20%);    @btn-warning-bg; @btn-warning-border); }
+.btn-outline-danger  { .button-outline-variant(@btn-danger-bg;     @btn-danger-bg;  @btn-danger-border);  }
+
+
+// buttons with totally rounded edges
+.btn-pill-lg { .button-size(@padding-large-vertical; @padding-large-horizontal + 5px; @font-size-large; @line-height-large; @line-height-computed); }
+.btn-pill-md { .button-size(@padding-base-vertical;  @padding-base-horizontal + 5px;  @font-size-base;  @line-height-base;  @line-height-computed); }
+.btn-pill-sm { .button-size(@padding-small-vertical; @padding-small-horizontal + 5px; @font-size-small; @line-height-small; @line-height-computed); }
+.btn-pill-xs { .button-size(@padding-xs-vertical;    @padding-xs-horizontal + 5px;    @font-size-small; @line-height-small; @line-height-computed); }
+
+@media (min-width: @screen-md-min) {
+  // poofy buttons
+  .btn-poofy-lg {
+    // line-height: ensure even-numbered height of button next to large input
+    .button-size(@padding-large-vertical + 10px; @padding-large-horizontal + 20px; @font-size-small; @line-height-large; @border-radius-large);
+  }
+  .btn-poofy-sm {
+    // line-height: ensure proper height of button next to small input
+    .button-size(@padding-small-vertical + 10px; @padding-small-horizontal + 20px; @font-size-small; @line-height-small; @border-radius-small);
+  }
+  .btn-poofy-xs {
+    .button-size(@padding-xs-vertical + 10px; @padding-xs-horizontal + 20px; @font-size-small; @line-height-small; @border-radius-small);
+  }
+}

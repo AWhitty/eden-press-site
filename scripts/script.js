@@ -1,11 +1,11 @@
-var navResponsive = $('nav.responsive');
+// var navResponsive = $('nav.responsive');
 
-navResponsive.hide();
+// navResponsive.hide();
 
-$('.nav-show').click(function() {
-	navResponsive.show();
-});
+// $('.nav-show').click(function() {
+// 	navResponsive.show();
+// });
 
-navResponsive.children('a.close').click(function() {
-	navResponsive.hide();
-});
+// navResponsive.children('a.close').click(function() {
+// 	navResponsive.hide();
+// });

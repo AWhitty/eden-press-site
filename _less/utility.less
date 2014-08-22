@@ -1,0 +1,32 @@
+.prose {
+  font-weight: 100;
+  font-size: @font-size-large;
+}
+
+@media (min-width: @screen-md-min) {
+  h1.text-too-big, .h1.text-too-big { font-size: @font-size-h1 * 1.4; }
+  h2.text-too-big, .h2.text-too-big { font-size: @font-size-h2 * 1.4; }
+  h3.text-too-big, .h3.text-too-big { font-size: @font-size-h3 * 1.4; }
+  h4.text-too-big, .h4.text-too-big { font-size: @font-size-h4 * 1.4; }
+  h5.text-too-big, .h5.text-too-big { font-size: @font-size-h5 * 1.4; }
+  h6.text-too-big, .h6.text-too-big { font-size: @font-size-h6 * 1.4; }
+
+  .prose {
+    font-size: @font-size-large * 1.2;
+  }
+}
+
+.generate-padding(@n, @i: 1) when (@i =< @n) {
+  .pad@{i}y {
+    padding-top: @line-height-computed * @i;
+    padding-bottom: @line-height-computed * @i;
+  }
+
+  .pad@{i}x {
+    padding-left: @line-height-computed * @i;
+    padding-right: @line-height-computed * @i;
+  }
+  .generate-padding(@n, (@i + 1));
+}
+
+.generate-padding(4);

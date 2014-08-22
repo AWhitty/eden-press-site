@@ -1,32 +1,32 @@
 ---
-layout: default
-body_id: page-gallery
+layout: card-deck
 ---
 
-<div class="content-01">
-	<header class="static">
-		<div class="container">
-			<div class="logo logo-dark">
-				<a href="#"><img src="/images/logo-dark.svg" alt="eDen" /></a>
-			</div>
+<section class="card card-half-height">
+  <div class="full-bg fade-dark-orange" style="background-image: url('/images/gallery/hands-up.jpg');"></div>
+  <div class="container text-center white-on-black">
+    <div class="row">
+      <div class="col-sm-10 col-sm-offset-1">
+        <h1>Media gallery</h1>
+      </div>
+    </div>
+  </div>
+</section>
 
-			{% include nav.html %}
-
-			<a href="#" class="nav-show">
-				<img src="/images/nav-icon.svg" alt="Show Navigation" />
-			</a>
-		</div>
-	</header>
-
-	<div class="content-02">
-
-		<div class="container">
-			<h1>Media Gallery</h1>
-		</div>
-
-		<section class="gallery js-masonry">
-		</section>
-	</div>
-</div>
+<section id="gallery" class="row">
+    {% for photo in site.data.gallery %}
+      <img src="{{ photo.file }}" alt="">
+    {% endfor %}
+</section>
 
 <script src="/scripts/masonry.min.js"></script>
+<script src="/scripts/images-loaded.min.js"></script>
+
+<script>
+  // or with jQuery
+  var $container = $('#gallery');
+  // initialize Masonry after all images have loaded
+  $container.imagesLoaded( function() {
+    $container.masonry();
+  });
+</script>
