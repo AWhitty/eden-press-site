@@ -3,7 +3,7 @@ layout: card-deck
 ---
 
 <section class="card card-half-height">
-  <div class="full-bg fade-dark-orange" style="background-image: url('/images/gallery/hands-up.jpg');"></div>
+  <div class="full-bg fade-dark-orange" style="background-image: url('{{ site.baseurl }}/images/gallery/hands-up.jpg');"></div>
   <div class="container text-center white-on-black">
     <div class="row">
       <div class="col-sm-10 col-sm-offset-1">
@@ -15,7 +15,7 @@ layout: card-deck
 
 <section id="gallery" class="row">
     {% for photo in site.data.gallery %}
-      <img src="{{ photo.file }}" alt="">
+      <img src="{{ site.baseurl }}{{ photo.file }}" alt="">
     {% endfor %}
 </section>
 

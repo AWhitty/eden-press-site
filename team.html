@@ -3,7 +3,7 @@ layout: card-deck
 ---
 
 <section class="card card-half-height white-on-black">
-  <div class="full-bg" style="background-image: url('/images/team-banner.jpg');"></div>
+  <div class="full-bg" style="background-image: url('{{ site.baseurl }}/images/team-banner.jpg');"></div>
 
   <div class="container text-center">
     <h3><strong>We are 40 dedicated students.</strong></h3>
@@ -16,7 +16,7 @@ layout: card-deck
     <div class="row pad2y">
       {% for member in site.data.team %}
         <div class="col-sm-4">
-          <img src="{{ member.picture }}" class="img-responsive" alt="">
+          <img src="{{ site.baseurl }}{{ member.picture }}" class="img-responsive" alt="">
           <h4>{{ member.name }}</h4>
           <h5>{{ member.role }}</h5>
         </div>
